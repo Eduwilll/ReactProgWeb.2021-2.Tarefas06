@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    5. Crie uma aplicação React com dois componentes chamados "Recipiente" e "Garrafa". 
+    O componente "Recipiente" deve conter:
+    • Método "constructor", utilizando o objeto state com a seguinte chave e valor:
+    mostrar: true
+    • Arrow function chamada "removerCabecalho", que altere o objeto state para false.
+    • Método "render", que verifique o valor do objeto state. Caso seja true, a variável 
+    "meuCabecalho" deverá receber o componente "Garrafa" (meuCabecalho = <Garrafa />;). 
+    Nesse caso, renderize o valor da variável "meuCabecalho" e um botão chamado "Remover
+    Cabeçalho", que no evento "onClick" chame a função "removerCabecalho".
+    O componente "Garrafa" deve conter:
+    • Método "componentWillUnmount", que use uma caixa de alerta ("alert") para exibir a 
+    seguinte mensagem: O componente chamado Cabecalho está prestes a ser desmontado.
+    • Método "render" para renderizar a seguinte mensagem na tela do browser:
+    Olá, React!
+    Ao clicar no botão "Remover Cabeçalho", a mensagem da caixa de alerta será exibida e, em 
+    seguida, a mensagem "Olá, React" não será renderizada.
+  </div>
+  <div id ="root"></div>
+</body>
+</html>
