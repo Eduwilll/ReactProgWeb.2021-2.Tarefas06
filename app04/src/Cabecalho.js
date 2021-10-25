@@ -11,7 +11,7 @@ class Cabecalho extends Component {
 
     componentDidMount() {
         console.warn("componentDidMount")
-        setInterval(
+        setTimeout(
             () => this.configurarTempoLimite(),
             1000
          );
@@ -27,24 +27,24 @@ class Cabecalho extends Component {
         console.warn("componentDidUpdate")
         console.log(this.state.corFavorita)
         console.log(prevProps)
+
         if (prevProps.corFavorita !== this.props.corFavorita) {
             console.log("Entou no if")
-            this.edit();
+            document.querySelector('#meuDiv').innerHTML = `<h1>A minha cor favorita é ${this.state.corFavorita}</h1>`
+
         }
     }
 
-    edit(meuDiv){
-        console.log(this.refs[meuDiv])
-        this.refs[meuDiv].innerHTML="i am clicked";
-    }
     render() {
         const {corFavorita} = this.state;
-
-        return (
-            <div ref = {meuDiv} >
-                <h1>A minha cor favorita é {corFavorita}.</h1> 
+      
+        return(
+            <div>       
+                <h1 >A minha cor favorita é {corFavorita}.</h1> 
+                <div id='meuDiv'>
+                    <h1>A minha cor favorita atualizada é {corFavorita}.</h1> 
+                </div>
             </div>
-            
         );
     }
 }
