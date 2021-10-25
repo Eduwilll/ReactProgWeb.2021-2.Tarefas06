@@ -10,7 +10,7 @@ class Cabecalho extends Component {
     }
 
     componentDidMount() {
-        setInterval(
+        setTimeout(
             () => this.configurarTempoLimite(),
             1000
          );
